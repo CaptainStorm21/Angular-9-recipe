@@ -11,7 +11,7 @@ export class AppComponent {
   constructor() {
     this.recipe = new Recipe(
       'Banana Bread',
-      'Banana bread. Qui amet duis sunt pariatur qui.',
+      'Qui Banana bread amet duis sunt pariatur qui.Consequat exercitation officia eu in eu laborum esse. Amet veniam duis consequat proident incididunt id fugiat. Tempor exercitation sint dolor Lorem esse. Cillum reprehenderit aliquip tempor dolore nulla non do esse eiusmod. Anim nisi proident magna qui id velit voluptate et reprehenderit. Occaecat non est proident duis sint et magna in aliquip dolore nostrud exercitation velit nostrud. Aliquip voluptate duis est dolore adipisicing labore esse.',
       null,
       null,
       null)
