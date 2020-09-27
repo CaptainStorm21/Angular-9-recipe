@@ -1,3 +1,4 @@
+import { Recipe } from './model/recipe';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-recipe';
+  recipe: Recipe;
+  constructor() {
+    this.recipe = new Recipe(
+      'Banana Bread',
+      'Banana bread. Qui amet duis sunt pariatur qui.',
+      null,
+      null,
+      null)
+  }
 }

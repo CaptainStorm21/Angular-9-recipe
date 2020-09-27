@@ -15,7 +15,7 @@ export class Recipe {
   public ingredients: Ingredient[];
   public instructions: Instruction[];
   public cover_photo: string;
-  construction(
+  constructor(
     t: string,
     d: string,
     ing: Ingredient[],
