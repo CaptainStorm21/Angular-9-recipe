@@ -1,4 +1,16 @@
-<div class="container-fluid">
-  <app-recipe-list></app-recipe-list>
+<div class="container-fluid pt-3 p-10">
+  <div class="header">
+     <nav>
+        <a routerLink="/home" routerLinkActive="active">Home</a>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+     </nav>
+  </div>
+  <div class="container-fluid pb-5 mb-5">
+     <app-recipe-list></app-recipe-list>
+  </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>
+
+<footer class="bg-dark fixed-bottom footer-dark">
+  <h2>footer</h2>
+</footer>

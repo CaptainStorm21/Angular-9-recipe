@@ -15,18 +15,25 @@ export class Recipe {
   public ingredients: Ingredient[];
   public instructions: Instruction[];
   public cover_photo: string;
+  public feed_this_many: number; // num of people
+  public preparation_time: number; //time in minutes
   constructor(
     t: string,
     d: string,
     ing: Ingredient[],
     ins: Instruction[],
-    cp: string)
+    cp: string,
+    ftm: number,
+    pt: number
+  )
   {
     this.title = t;
     this.description = d;
     this.ingredients = ing;
     this.instructions = ins;
     this.cover_photo = cp;
+    this.feed_this_many = ftm;
+    this.preparation_time = pt;
   }
 }
 

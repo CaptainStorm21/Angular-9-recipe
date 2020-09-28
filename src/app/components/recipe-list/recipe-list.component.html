@@ -1,5 +1,43 @@
 <div class="row mt-5">
-    <div *ngFor="let recipe of recipes" class="col-sm-12 col-md-3 col-lg-3">
-      <app-recipe-summary [recipe]='recipe'></app-recipe-summary>
+  <div *ngFor="let recipe of recipes" class="col-sm-12 col-md-3 col-lg-3">
+    <app-recipe-summary [recipe]='recipe'></app-recipe-summary>
+  </div>
+</div>
+
+<div class="clearfix mt-5">
+  <div class="col-md-4 col-lg-4 col-sm-3">
+    <div class="card">
+      <div class="card-header">
+        <h3>New Recipe</h3>
+      </div>
+      <div class="card-body">
+        <div class="col-md-12 col-lg-12 col-sm-12">
+          <form>
+            <div class="form-group">
+              <label for="RecipeTitle">Recipe Title</label>
+              <input type="text" class="form-control" id="RecipeTitle" aria-describedby="RecipeTitle"
+                placeholder="Enter Recipe Title">
+              <label for="RecipeTitle">Recipe Title</label>
+              <textarea type="text" rows="6" class="form-control" id="RecipeTitle" aria-describedby="RecipeTitle"
+                placeholder="Enter Recipe Title">
+              </textarea>
+              <label for="RecipeTitle">Preparation Time</label>
+              <input type="text" class="form-control" id="Preparation Time" aria-describedby="Preparation Time"
+                placeholder="Enter Time to Prepare">
+              <label for="RecipeTitle">Feeds This Many</label>
+              <input type="text" class="form-control" id="Servings" aria-describedby="Servings"
+                placeholder="Enter number to serve">
+            </div>
+
+          </form>
+        </div>
+        <!--end of grid for form-->
+      </div>
+      <!--end of card-body-->
+      <div class="card-footer">
+        <button class="btn btn-dark"> Add a New Recipe </button>
+      </div>
     </div>
   </div>
+  <!--grid-->
+</div>
