@@ -4,9 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+//custom components
+import { RecipeListComponent } from './components/recipe-list/recipe-list.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    RecipeListComponent
   ],
   imports: [
     BrowserModule,
