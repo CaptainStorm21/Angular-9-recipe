@@ -12,30 +12,53 @@
       </div>
       <div class="card-body">
         <div class="col-md-12 col-lg-12 col-sm-12">
-          <form>
+
             <div class="form-group">
-              <label for="RecipeTitle">Recipe Title</label>
-              <input type="text" class="form-control" id="RecipeTitle" aria-describedby="RecipeTitle"
-                placeholder="Enter Recipe Title">
-              <label for="RecipeTitle">Recipe Title</label>
-              <textarea type="text" rows="6" class="form-control" id="RecipeTitle" aria-describedby="RecipeTitle"
-                placeholder="Enter Recipe Title">
-              </textarea>
-              <label for="RecipeTitle">Preparation Time</label>
-              <input type="text" class="form-control" id="Preparation Time" aria-describedby="Preparation Time"
-                placeholder="Enter Time to Prepare">
-              <label for="RecipeTitle">Feeds This Many</label>
-              <input type="text" class="form-control" id="Servings" aria-describedby="Servings"
-                placeholder="Enter number to serve">
+              <div>
+                <label for="RecipeTitle">Recipe Title</label>
+                <input type="text" 
+                       class="form-control" 
+                       id="RecipeTitle" 
+                       aria-describedby="RecipeTitle"
+                       [(ngModel)]="recipe_in_progress.title"
+                       placeholder="Enter Recipe Title">
+              </div>
+              <div>
+                <label for="RecipeHowTo">Recipe HowTo</label>
+                <textarea type="text" rows="6" 
+                          class="form-control" 
+                          id="RecipeText" 
+                          [(ngModel)]="recipe_in_progress.description"
+                          aria-describedby="RecipeHow to"
+                          placeholder="Enter Recipe">
+                </textarea>
+              </div>
+              <div>
+                <label for="RecipeTitle">Preparation Time</label>
+                <input type="text" 
+                       class="form-control" 
+                       id="Preparation Time" 
+                       aria-describedby="Preparation Time"
+                       [(ngModel)]="recipe_in_progress.preparation_time"
+                       placeholder="Enter Time to Prepare">
+              </div>
+              <div>
+                <label for="RecipeTitle">Feeds This Many</label>
+                <input type="text" 
+                       class="form-control" 
+                       id="Servings" aria-describedby="Servings"
+                       [(ngModel)]="recipe_in_progress.feed_this_many"
+                  placeholder="Enter number to serve">
+              </div>
             </div>
 
-          </form>
+
         </div>
         <!--end of grid for form-->
       </div>
       <!--end of card-body-->
       <div class="card-footer">
-        <button class="btn btn-dark"> Add a New Recipe </button>
+        <button class="btn btn-dark" value="Add a New Recipe" (click)="addRecipeClicked()"> Add a New Recipe </button>
       </div>
     </div>
   </div>
