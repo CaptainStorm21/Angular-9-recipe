@@ -15,6 +15,13 @@ export class RecipeListComponent {
     yellowBg: false
   };
 
+  title_text_color = 'red';
+  current_css_styles = {
+    color: 'purple',
+    backgroundColor: 'green',
+    padding: '10px'
+  }
+
   /*multiple recipes*/
   recipes: Recipe[];
 
@@ -80,6 +87,22 @@ export class RecipeListComponent {
 
   toggleDarkBackground():void {
     this.current_css_classes.yellowBg = !this.current_css_classes.yellowBg;
+  }
+
+  // toggleTitleColor(): void{
+  //   if ( this.title_text_color === 'red') {
+  //     this.title_text_color = 'black';
+  //   } else {
+  //     this.title_text_color = 'red';
+  //   }
+  // }
+
+  toggleTitleColor(): void{
+    if ( this.current_css_styles.color === 'purple') {
+      this.current_css_styles.color = 'yellow';
+    } else {
+      this.current_css_styles.color = 'purple';
+    }
   }
 }
 
