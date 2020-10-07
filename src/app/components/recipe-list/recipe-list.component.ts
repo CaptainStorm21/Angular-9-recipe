@@ -64,6 +64,10 @@ export class RecipeListComponent {
     this.recipe_in_progress = Recipe.createBlank();
   }
 
+  recipeZoomIn(recipe: Recipe): void {
+    console.log(JSON.stringify(recipe, null, 2));
+  }
+
 }
 
 

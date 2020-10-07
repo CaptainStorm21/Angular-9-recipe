@@ -1,6 +1,6 @@
 <div class="row mt-5">
   <div *ngFor="let recipe of recipes" class="col-sm-12 col-md-3 col-lg-3">
-    <app-recipe-summary [recipe]='recipe'></app-recipe-summary>
+    <app-recipe-summary [recipe]='recipe' (zoomIn)="recipeZoomIn(recipe)"></app-recipe-summary>
   </div>
 </div>
 
@@ -13,46 +13,29 @@
       <div class="card-body">
         <div class="col-md-12 col-lg-12 col-sm-12">
 
-            <div class="form-group">
-              <div>
-                <label for="RecipeTitle">Recipe Title</label>
-                <input type="text" 
-                       class="form-control" 
-                       id="RecipeTitle" 
-                       aria-describedby="RecipeTitle"
-                       [(ngModel)]="recipe_in_progress.title"
-                       placeholder="Enter Recipe Title">
-              </div>
-              <div>
-                <label for="RecipeHowTo">Recipe HowTo</label>
-                <textarea type="text" rows="6" 
-                          class="form-control" 
-                          id="RecipeText" 
-                          [(ngModel)]="recipe_in_progress.description"
-                          aria-describedby="RecipeHow to"
-                          placeholder="Enter Recipe">
-                </textarea>
-              </div>
-              <div>
-                <label for="RecipeTitle">Preparation Time</label>
-                <input type="text" 
-                       class="form-control" 
-                       id="Preparation Time" 
-                       aria-describedby="Preparation Time"
-                       [(ngModel)]="recipe_in_progress.preparation_time"
-                       placeholder="Enter Time to Prepare">
-              </div>
-              <div>
-                <label for="RecipeTitle">Feeds This Many</label>
-                <input type="text" 
-                       class="form-control" 
-                       id="Servings" aria-describedby="Servings"
-                       [(ngModel)]="recipe_in_progress.feed_this_many"
-                  placeholder="Enter number to serve">
-              </div>
+          <div class="form-group">
+            <div>
+              <label for="RecipeTitle">Recipe Title</label>
+              <input type="text" class="form-control" id="RecipeTitle" aria-describedby="RecipeTitle"
+                [(ngModel)]="recipe_in_progress.title" placeholder="Enter Recipe Title">
             </div>
-
-
+            <div>
+              <label for="RecipeHowTo">Recipe HowTo</label>
+              <textarea type="text" rows="6" class="form-control" id="RecipeText"
+                [(ngModel)]="recipe_in_progress.description" aria-describedby="RecipeHow to" placeholder="Enter Recipe">
+                </textarea>
+            </div>
+            <div>
+              <label for="RecipeTitle">Preparation Time</label>
+              <input type="text" class="form-control" id="Preparation Time" aria-describedby="Preparation Time"
+                [(ngModel)]="recipe_in_progress.preparation_time" placeholder="Enter Time to Prepare">
+            </div>
+            <div>
+              <label for="RecipeTitle">Feeds This Many</label>
+              <input type="text" class="form-control" id="Servings" aria-describedby="Servings"
+                [(ngModel)]="recipe_in_progress.feed_this_many" placeholder="Enter number to serve">
+            </div>
+          </div>
         </div>
         <!--end of grid for form-->
       </div>

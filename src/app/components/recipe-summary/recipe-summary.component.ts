@@ -1,5 +1,5 @@
 import { Recipe } from './../../model/recipe';
-import { Component, Input} from '@angular/core';
+import { Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-recipe-summary',
@@ -11,8 +11,14 @@ export class RecipeSummaryComponent{
   @Input()
   recipe: Recipe;
 
+  @Output()
+  zoomIn: EventEmitter<Recipe> = new EventEmitter();
+
   constructor() { }
 
+  fireZoominEvent() {
+    this.zoomIn.emit(this.recipe);
+  }
 
 
 }
