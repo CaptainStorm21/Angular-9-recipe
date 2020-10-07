@@ -1,16 +1,23 @@
-<div class="container-fluid pt-3 p-10">
-  <div class="header">
-     <nav>
-        <a routerLink="/home" routerLinkActive="active">Home</a>
-        <a routerLink="/about" routerLinkActive="active">About</a>
-     </nav>
-  </div>
-  <div class="container-fluid pb-5 mb-5">
-     <app-recipe-list></app-recipe-list>
-  </div>
-  <router-outlet></router-outlet>
-</div>
+<div class="container-fluid">
+   <h1 class="text-center"> Recipe Collection </h1>
+   <nav class="navbar navbar-expand-lg bg-success">
+      <ul class="navbar-nav">
+         <li class="nav-item">
+            <a routerLink="/home" class="text-white nav-link" routerLinkActive="active">Home</a>
+         </li>
+         <li class="nav-item">
+            <a routerLink="/about" class="text-white nav-link" routerLinkActive="active">About</a>
+         </li>
+      </ul>
+   </nav>
 
-<footer class="bg-dark fixed-bottom footer-dark">
-  <h2>footer</h2>
-</footer>
+   <div class="pb-5 mb-5">
+      <app-recipe-list></app-recipe-list>
+   </div>
+   <router-outlet></router-outlet>
+
+
+   <footer class="bg-success footer-dark">
+      <h2 class="p-2">footer</h2>
+   </footer>
+</div>

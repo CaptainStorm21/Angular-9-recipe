@@ -9,7 +9,11 @@ import { Recipe } from 'src/app/model/recipe';
 export class RecipeListComponent {
 
   recipe_in_progress: Recipe;
+  use_dark_background: boolean;
 
+  current_css_classes = {
+    yellowBg: false
+  };
 
   /*multiple recipes*/
   recipes: Recipe[];
@@ -68,6 +72,15 @@ export class RecipeListComponent {
     console.log(JSON.stringify(recipe, null, 2));
   }
 
+  // use_dark_background: boolean;
+  // toggleDarkBackground() :void {
+  //   this.use_dark_background = !this.use_dark_background;
+  // }
+
+
+  toggleDarkBackground():void {
+    this.current_css_classes.yellowBg = !this.current_css_classes.yellowBg;
+  }
 }
 
 

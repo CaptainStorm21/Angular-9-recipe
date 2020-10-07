@@ -1,3 +1,20 @@
+<!-- <div>
+  <input type="button" value="toggle dark" (click)="toggleDarkBackground()" />
+</div>
+  <h3 class="{{use_dark_background ? 'dark-bg': ''}}" >Switch</h3> -->
+
+<!-- <div>
+  <h3 class="pl-4 pt-2 py-2" [class.dark-bg]="use_dark_background">new recipes are added daily</h3>
+  <input type="button" value="toggle dark" (click)="toggleDarkBackground()" />
+</div> -->
+
+<div>
+  <h3 class="pl-4 pt-2 py-2" [ngClass]="current_css_classes">new recipes are added daily</h3>
+  <input type="button" value="toggle dark" (click)="toggleDarkBackground()" />
+</div>
+
+
+
 <div class="row mt-5">
   <div *ngFor="let recipe of recipes" class="col-sm-12 col-md-3 col-lg-3">
     <app-recipe-summary [recipe]='recipe' (zoomIn)="recipeZoomIn(recipe)"></app-recipe-summary>
